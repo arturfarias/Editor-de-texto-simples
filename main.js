@@ -1,4 +1,5 @@
-const {app, BrowserWindow,Menu} = require('electron');
+const {app, BrowserWindow} = require('electron');
+const menu = require("./menu");
 
 app.on('ready',function(){
     let mainWindows = new BrowserWindow({
@@ -23,5 +24,3 @@ app.on('ready',function(){
         mainWindows.show()
       })
 });
-
-Menu.setApplicationMenu(null);
