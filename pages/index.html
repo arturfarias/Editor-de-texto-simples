@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
     <title>Document</title>
     <link rel="stylesheet" href="../bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="teste"></div>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/bold.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/italic.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/cross-out.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/underline.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/left-alignment.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/right-alignment.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/center-alignment-1.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/center-alignment.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/braces.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/text-align.svg" height="20"/>  </button>
+            <button type="button" class="btn btn-outline-secondary textEdit">  <img src="../static/svg/text-alignment-2.svg" height="20"/>  </button>
+        </div>
+          
+
+        <div class="row">
+            <span id="lines"><br></span>
+            
+            <div id="editor" class="container " contenteditable="true"></div>
+        </div>
+
+        <!-- TODO fazer o rodape  -->
+        <div class="row">
+            Rodape
+        </div>
+      </div>
+
 
     <script src="control.js"></script>
 </body>
