@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "builder-linux": "electron-packager . editor_de_texto --overwrite --asar=true --platform=linux --arch=x64 --icon=/static/icon.jpg --prune=true --out=release-builds",
-    "make-deb": "electron-installer-debian --src release-builds/editor_de_texto-linux-x64/ --dest dist/installers/ --arch amd64"
+    "make-deb": "electron-installer-debian --src release-builds/editor_de_texto-linux-x64/ --dest dist/installers/ --arch amd64 --icon static/icon.jpg"
   },
   "keywords": [],
   "author": "eu",
