@@ -1,7 +1,8 @@
 #editor{
     background-color:white;
-    width: 96%;
-    min-height: 528px;
+    width: 97%;
+    min-height: 440px;
+    float: right;
 }
 
 .textEdit{
@@ -11,12 +12,17 @@
 
 
 #lines{
-    float: right;
+    float: left;
     text-align: right;
-    width: 4%;
-    background-color: rgb(145, 145, 145);
+    width: 3%;
+    background-color: rgb(209, 209, 209);
 }
 
 body{
     background-color: rgb(223, 223, 223);
+    overflow-y: scroll;
+}
+
+footer{
+    float: inline-end;
 }
