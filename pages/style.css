@@ -1,21 +1,18 @@
 #editor{
     background-color:white;
     width: 97%;
-    min-height: 440px;
+    min-height: 20px;
     float: right;
+    padding-left: 2px;
+    padding-right: 2px;
 }
-
-.textEdit{
-    margin-left: 1px;
-    margin-right: 1px;
-}
-
 
 #lines{
     float: left;
     text-align: right;
     width: 3%;
     background-color: rgb(209, 209, 209);
+    padding-right: 5px;
 }
 
 body{
@@ -26,3 +23,27 @@ body{
 footer{
     float: inline-end;
 }
+
+.info{
+    float: right;
+    padding-top: 7px;
+    padding-right: 10px;
+}
+
+#footerLines{
+    float: left;
+    padding-top: 7px;
+    padding-left: 3%;
+
+}
+
+#moldura{
+    min-height: 440px;
+    background-color:white;
+}
+
+#editor:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
