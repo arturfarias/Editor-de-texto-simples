@@ -10,59 +10,49 @@
 </head>
 <body>
 
-    <header class="toolbar toolbar-header">
-      
+    <!-- TODO adicionar novos botões -->
+    <header id="menu" class="toolbar toolbar-header">
         <div class="toolbar-actions">
             <div class="toolbar-actions">
                 <div class="btn-group">
-                  <button class="btn btn-default">
+                  <button id="bold" class="btn btn-default">
                     <span><img src="../static/svg/bold.svg" height="12"/></span>
                   </button>
-                  <button class="btn btn-default">
+                  <button id="italic" class="btn btn-default">
                     <span> <img src="../static/svg/italic.svg" height="12"/></span>
                   </button>
-                  <button class="btn btn-default">
+                  <!-- FIXME Trocar icone para um de paragrafo -->
+                  <button id="paragraph" class="btn btn-default">
                     <span><img src="../static/svg/cross-out.svg" height="12"/></span>
                   </button>
-                  <button class="btn btn-default">
+                  <!-- FIXME Trocar icone para uma linha horizontal -->
+                  <button id="insertHorizontalRule" class="btn btn-default">
                     <span><img src="../static/svg/underline.svg" height="12"/></span>
                   </button>
                 </div>
 
 
                 <div class="btn-group">
-                    <button class="btn btn-default">
+                    <button id="justifyLeft" class="btn btn-default">
                       <span><img src="../static/svg/left-alignment.svg" height="12"/></span>
                     </button>
-                    <button class="btn btn-default">
+                    <button id="justifyRight" class="btn btn-default">
                       <span><img src="../static/svg/right-alignment.svg" height="12"/></span>
                     </button>
-                    <button class="btn btn-default">
+                    <button id="justifyCenter" class="btn btn-default">
                       <span><img src="../static/svg/center-alignment-1.svg" height="12"/></span>
-                    </button>
-                    <button class="btn btn-default">
-                      <span><img src="../static/svg/center-alignment.svg" height="12"/></span>
                     </button>
                 </div>
 
                 <div class="btn-group">
-                    <button class="btn btn-default">
-                      <span><img src="../static/svg/braces.svg" height="12"/></span>
-                    </button>
-                    <button class="btn btn-default">
+                    <button id="insertOrderedList" class="btn btn-default">
                       <span><img src="../static/svg/text-align.svg" height="12"/></span>
-                    </button>
-                    <button class="btn btn-default">
-                      <span><img src="../static/svg/text-alignment-2.svg" height="12"/></span>
                     </button>
                 </div>
         </div>
       </header>
       
-            <span id="lines"><br></span>
-            <div id="moldura">
-              <div id="editor" contenteditable="true"></div>
-            </div>
+      <div id="editor" contenteditable="true"></div>
       
       <footer class="toolbar toolbar-footer">
         <div id="footer" class="toolbar-actions">
