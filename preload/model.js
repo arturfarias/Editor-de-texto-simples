@@ -8,4 +8,4 @@ class File{
     };
 };
 
-window.custom = {File};
+window.File = File;

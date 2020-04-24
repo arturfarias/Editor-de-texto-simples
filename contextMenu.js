@@ -1,5 +1,6 @@
 const {Menu} = require('electron');
-// TODO colocar comandos para abrir salvar e iniciar arquivos
+
+// TODO colocar comandos do menu
 const template = Menu.buildFromTemplate([
     { id: '1', label: 'one' },
     { id: '2', label: 'two' },
@@ -7,6 +8,4 @@ const template = Menu.buildFromTemplate([
     { id: '4', label: 'four' }
   ]);
 
-Menu.setApplicationMenu(template);
-
-module.exports = Menu;
+  module.exports = template;

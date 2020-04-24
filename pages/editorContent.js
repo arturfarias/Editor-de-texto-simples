@@ -12,9 +12,6 @@ function putFooter(){
 
     footer.innerHTML = `<div class="info"> <b>Caracteres: ${charactersNumber}</b></div>
     <div class="info" > <b>Palavras: ${charactersNumber == 0 && wordsNumber == 1 ? 0 : wordsNumber}</b> </div>`;
-    
-
-    scrollbar.scrollTop = scrollbar.scrollHeight;
 };
 
 document.getElementById("editor").oninput = putFooter
@@ -23,6 +20,9 @@ document.getElementsByTagName("body")[0].onclick = ()=>{
     editor.focus();
 };
 
-editor.style.minHeight = `${window.innerHeight}px`
+window.onresize = ()=>{
+    editor.style.minHeight = `${window.innerHeight - 80}px`
+    editor.style.maxHeight = `${window.innerHeight -80}px`
+}
 editor.focus();
 putFooter()

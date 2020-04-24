@@ -1,5 +1,6 @@
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow,Menu,MenuItem} = require('electron');
 const menu = require("./menu");
+const contex_menu = require("./contextMenu");
 
 app.on('ready',function(){
     let mainWindows = new BrowserWindow({
@@ -8,7 +9,8 @@ app.on('ready',function(){
         title: "Editor de Texto",
         show: false,
         webPreferences: {
-            preload: `${__dirname}/preload/model.js`
+            preload: `${__dirname}/preload/model.js`,
+            preload: `${__dirname}/preload/dialog.js`
         }
     });
 
@@ -23,4 +25,8 @@ app.on('ready',function(){
         mainWindows.maximize()
         mainWindows.show()
       })
+
+    mainWindows.webContents.on('context-menu',function(e,params){
+        contex_menu.popup(mainWindows,params.x,params.y)
+    })
 });
