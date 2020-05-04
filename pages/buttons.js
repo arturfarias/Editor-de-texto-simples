@@ -23,7 +23,7 @@ document.getElementById("insertImage").onclick = ()=>{
         command("insertImage",data);
     });
 };
-// TODO resolver bug da fonte que não funciona
+
 document.getElementById("font").onchange = ()=>{command("fontName",document.getElementById("font").value)};
 document.getElementById("fontSize").onchange = ()=>{command("fontSize",document.getElementById("fontSize").value)};
 document.getElementById("foreColor").onchange = ()=>{command("foreColor",document.getElementById("foreColor").value)};
