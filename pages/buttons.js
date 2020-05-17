@@ -21,7 +21,7 @@ document.getElementById("insertUnorderedList").onclick = ()=>{command("insertUno
 document.getElementById("insertImage").onclick = ()=>{
     dialog.getImage().then((data)=>{
         command("insertImage",data);
-    });
+    }).catch(()=>{});
 };
 
 document.getElementById("font").onchange = ()=>{command("fontName",document.getElementById("font").value)};

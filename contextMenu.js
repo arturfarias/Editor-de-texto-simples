@@ -1,11 +1,13 @@
 const {Menu} = require('electron');
 
-// TODO colocar comandos do menu
 const template = Menu.buildFromTemplate([
-    { id: '1', label: 'one' },
-    { id: '2', label: 'two' },
-    { id: '3', label: 'three' },
-    { id: '4', label: 'four' }
+	{ label: 'copiar', role: 'copy' },
+    { label: 'colar', role: 'paste' },
+    { label: 'recortar', role: 'cut' },
+    { label: 'deletar', role: 'delete' },
+    { label: 'selecionar', role: 'selectAll' },
+    { label: 'desfazer',role: 'undo' },
+    { label: 'refazer', role: 'redo' },
   ]);
 
   module.exports = template;

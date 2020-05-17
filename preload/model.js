@@ -1,11 +1,17 @@
-window.addEventListener('DOMContentLoaded', () => {
-    // document.getElementById("teste").innerHTML = "testando"
-    // document.getElementById('bot').onclick = testes;
-  })
-//TODO criar as assinaturas dos metodos para manipular arquivos.
+const fs = require("fs");
+
 class File{
     constructor(){
     };
+
+    async openFile(path){
+    	        var data = fs.readFileSync(path,"utf-8");
+        return data;
+    };
+
+    async saveFile(path,content){
+    	fs.writeFileSync(path, content);
+    };
 };
 
-window.File = File;
+module.exports = File;
