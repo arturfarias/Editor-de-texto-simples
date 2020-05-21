@@ -21,3 +21,6 @@ npm run builder-linux
 # If you want to create a deb package
 npm run make-deb
 ```
+## images
+![editor](https://github.com/arturfarias/Editor-de-texto-simples/blob/master/project.png?raw=true "editor")
+
