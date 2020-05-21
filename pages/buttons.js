@@ -1,29 +1,34 @@
 const dialog = new Dialog();
 
-function command(command,value){
+function command(command, value=window.getSelection()){
     document.execCommand(command, false, value);
 };
 
+function click(id,func){
+	document.getElementById(id).onclick = func;
+};
 
-document.getElementById("bold").onclick = ()=>{command("bold",window.getSelection())};
-document.getElementById("italic").onclick = ()=>{command("italic",window.getSelection())};
-document.getElementById("paragraph").onclick = ()=>{command("formatBlock",'<p>')};
-document.getElementById("superscript").onclick = ()=>{command("superscript",window.getSelection())};
-document.getElementById("insertHorizontalRule").onclick = ()=>{command("insertHorizontalRule",window.getSelection())};
+click("bold", ()=>{command("bold")});
+click("italic", ()=>{command("italic")});
+click("paragraph", ()=>{command("formatBlock",'<p>')});
+click("superscript", ()=>{command("superscript")});
+click("insertHorizontalRule", ()=>{command("insertHorizontalRule")});
 
-document.getElementById("justifyLeft").onclick = ()=>{command("justifyLeft",window.getSelection())};
-document.getElementById("justifyRight").onclick = ()=>{command("justifyRight",window.getSelection())};
-document.getElementById("justifyCenter").onclick = ()=>{command("justifyCenter",window.getSelection())};
+click("justifyLeft", ()=>{command("justifyLeft")});
+click("justifyRight", ()=>{command("justifyRight")});
+click("justifyCenter", ()=>{command("justifyCenter")});
 
-document.getElementById("insertOrderedList").onclick = ()=>{command("insertOrderedList",window.getSelection())};
-document.getElementById("insertUnorderedList").onclick = ()=>{command("insertUnorderedList",window.getSelection())};
+click("insertOrderedList", ()=>{command("insertOrderedList")});
+click("insertUnorderedList", ()=>{command("insertUnorderedList")});
 
-document.getElementById("insertImage").onclick = ()=>{
+click("insertImage", ()=>{
     dialog.getImage().then((data)=>{
         command("insertImage",data);
     }).catch(()=>{});
-};
+});
 
-document.getElementById("font").onchange = ()=>{command("fontName",document.getElementById("font").value)};
-document.getElementById("fontSize").onchange = ()=>{command("fontSize",document.getElementById("fontSize").value)};
+click("font", ()=>{command("fontName",document.getElementById("font").value)});
+click("fontSize", ()=>{command("fontSize",document.getElementById("fontSize").value)});
+click("foreColor", ()=>{command("foreColor",document.getElementById("foreColor").value)});
+
 document.getElementById("foreColor").onchange = ()=>{command("foreColor",document.getElementById("foreColor").value)};
