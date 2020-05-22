@@ -1,9 +1,8 @@
 //const file = new custom.File();
 
 let editor = document.getElementById("editor");
-let moldura = document.getElementById("moldura");
 let lines = document.getElementById("lines");
-let scrollbar = document.getElementsByTagName("body")[0];
+let indexBody = document.getElementsByTagName("body")[0];
 let footer = document.getElementById("footer");
 
 function putFooter(){
@@ -14,9 +13,9 @@ function putFooter(){
     <div class="info" > <b>Palavras: ${charactersNumber == 0 && wordsNumber == 1 ? 0 : wordsNumber}</b> </div>`;
 };
 
-document.getElementById("editor").oninput = putFooter
+editor.oninput = putFooter
 
-document.getElementsByTagName("body")[0].onclick = ()=>{
+indexBody.onclick = ()=>{
     editor.focus();
 };
 

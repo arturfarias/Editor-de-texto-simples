@@ -13,6 +13,7 @@ app.on('ready',function(){
     });
 
     mainWindows.loadFile("pages/index.html");
+    //mainWindows.webContents.openDevTools();
 
     mainWindows.on("closed", ()=>{
         mainWindows = null;
